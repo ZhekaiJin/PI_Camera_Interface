@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Who is Scott</title>
+    <script language="javascript">
+		var mjpeg_img0,mjpeg_img1,mjpeg_img2;
+		document.write("this is a multiview of concurrent Pi cameras view \n");
+		function load_img0() {mjpeg_img0.src = "multiview.php?time=" + new Date().getTime() + "&pHost=0";}
+		function load_img1() {mjpeg_img1.src = "multiview.php?time=" + new Date().getTime() + "&pHost=1";}
+		function init() {
+			mjpeg_img0 = document.getElementById("mjpeg_dest0");
+			if(mjpeg_img0) mjpeg_img0.onload = load_img0();
+			mjpeg_img1 = document.getElementById("mjpeg_dest1");
+			if(mjpeg_img1) mjpeg_img1.onload = load_img1();
+		}
+	</script>
+  </head>
+  <body onload="setTimeout('init();', 100);">
+      <img id="mjpeg_dest0" />
+      <img id="mjpeg_dest1" />
+	  <button type="button" onclick="window.alert(Nothing Here right now)">Exit</button>
+ </body>
+</html>
