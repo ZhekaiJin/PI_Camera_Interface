@@ -9,6 +9,8 @@ git clone https://github.com/zhekaijin/PI_Camera_Interface.git
 cd RPi_Cam_Web_Interface
 ./install.sh
 ```
+## Block Diagram ##
+![](assets/data_flow.png)
 
 ## Full Documentation ##
 [RPI Camera Inteface](https://elinux.org/RPi-Cam-Web-Interface)
